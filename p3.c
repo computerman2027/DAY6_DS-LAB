@@ -56,7 +56,7 @@ void intopost(char* str,char* ans2)
 	int i,k=0;
 	for(i=0;i<l;i++)
 	{
-		if(isdigit(str[i]))
+		if(isdigit(str[i])|| isalpha(str[i]))
 		{
 			ans[k]=str[i];
 			k++;
