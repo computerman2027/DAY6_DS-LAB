@@ -68,23 +68,25 @@ void intopost(char* str,char* ans2)
 		else if(str[i]==')')
 		{
 			d=pop();
+			ans[k]=' ';
+			k++;
 			while(d!='(')
 			{
 				ans[k]=d;
-				ans[k+1]=',';
+				ans[k+1]=' ';
 				k+=2;
 				d=pop();
 			}
 		}
 		else
 		{
-			ans[k]=',';
+			ans[k]=' ';
 			k++;
 			while(presedence(peep())>=presedence(str[i]))
 			{
 				d=pop();
 				ans[k]=d;
-				ans[k+1]=',';
+				ans[k+1]=' ';
 				k+=2;
 			}
 			push(str[i]);
